@@ -1,0 +1,13 @@
+.recommended__video {
+  flex: 0.8;
+  padding: 3em 1.5em;
+}
+
+.recommended__video > h2 {
+  margin-left: 0.4em;
+  margin-bottom: 1.5em;
+}
+
+.title {
+  color: white;
+}

@@ -1,0 +1,42 @@
+.sidebar__item {
+  display: flex;
+  align-items: center;
+  padding: 0.8em;
+}
+
+.sidebarItem__icon {
+  font-size: large;
+}
+
+.sidebarItem__title {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 1.5em;
+}
+/*hover state*/
+.sidebar__item:hover {
+  background-color: rgb(44, 42, 42);
+  cursor: pointer;
+}
+/*when the hover state is active just put color red on icon*/
+.sidebar__item:hover > .sidebarItem__icon {
+  color: red;
+}
+
+/*when item is selected change the bg*/
+.sidebar__item.selected {
+  background-color: rgb(44, 42, 42) !important;
+}
+
+/* active state when selected just change the icon bg to red*/
+.sidebar__item.selected > .sidebarItem__icon {
+  color: red;
+}
+
+.sidebar__item > .sidebarItem__title {
+  color: white;
+}
+.sidebar__item > .sidebarItem__icon {
+  color: white;
+}

@@ -1,0 +1,45 @@
+.videoComponent {
+  width: 260px;
+  margin-bottom: 2em;
+}
+
+.videoComponent__thumbnail {
+  width: 250px;
+  height: 140px;
+  cursor: pointer;
+}
+
+.video__text {
+  color: white;
+  font-weight: normal;
+  margin-left: 1em;
+  cursor: pointer;
+}
+.video__text > h4 {
+  font-size: 14px;
+  margin-bottom: 0.7em;
+}
+
+.video__text > .views {
+  font-size: 13px;
+  color: rgb(175, 171, 171);
+}
+.video__text > .channel {
+  font-size: 13px;
+  color: rgb(175, 171, 171);
+}
+
+.recommendeVideos__videos {
+  display: flex;
+  flex-wrap: wrap;
+}
+.videoComponent__info {
+  display: flex;
+  margin-top: 1em;
+  padding-right: 2em;
+}
+.video__avatar {
+  width: 35px !important;
+  height: 35px !important;
+  cursor: pointer;
+}
