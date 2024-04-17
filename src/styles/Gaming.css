@@ -1,0 +1,59 @@
+.app__page {
+  display: flex;
+}
+.gaming_page {
+  flex: 0.8;
+  padding-right: 1em;
+}
+
+.container_gaming {
+  width: 100%;
+  background: #181818;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.container_child_gaming {
+  flex: 0.8;
+  padding: 1em 1em;
+  display: flex;
+  align-items: center;
+}
+.container_child_gaming > h2 {
+  padding-left: 1.5em;
+  color: white;
+  font-weight: normal;
+}
+
+.list_container > h2 {
+  padding-left: 1em;
+  color: white;
+  font-weight: normal;
+}
+
+.list_container > ul {
+  padding-top: 1em;
+  padding-left: 1em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.gaming__video {
+  flex: 0.8;
+  padding: 3em 1.5em;
+}
+.gamingVideos__videos {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.BigContainer {
+  background: #125543;
+}
+.containerChild2 {
+  display: flex;
+}

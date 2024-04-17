@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import "../styles/RecommendedVideo.css";
 import axios from "axios";
 import VideoComponent from "./VideoComponent";
+import { v4 as uuidv4 } from "uuid";
 
 function RecommendedVideo() {
   const [recommendedVideo, setrecommendedVideo] = useState([]);
-  const [isError, setIsError] = useState(false);
+  //const [isError, setIsError] = useState(false);
 
   useEffect(() => {
     axios
@@ -18,7 +19,7 @@ function RecommendedVideo() {
       })
       .catch((error) => {
         console.log(error);
-        setIsError(true);
+        // setIsError(true);
       });
   }, []);
 
@@ -57,11 +58,12 @@ function RecommendedVideo() {
   return (
     <div className="recommended__video">
       <h2 className="title">Recommended</h2>
-      <div className="recommendeVideos__videos">
+      <div className="recommendVideos__videos">
         {recommendedVideo.map((video) => {
           return (
             <VideoComponent
-              key={video.videoId}
+              id={video.videoId}
+              key={uuidv4()}
               title={video.title}
               channel={video.channelName}
               views={video.views}

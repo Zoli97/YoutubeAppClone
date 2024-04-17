@@ -1,0 +1,540 @@
+- use material ui, responsive deisgn, firebase to host data, deploy webiste , handle spearate sort of pages using react brewer. no refresh.
+- real time db with firebase 
+- letgs get start
+
+friendly aws this firebase
+Google Analytics is a free and unlimited analytics solution that enables targeting, 
+reporting, and more in Firebase Crashlytics, Cloud Messaging, In-App Messaging, Remote Config, A/B Testing, and Cloud Functions.
+setup everything tha i need in order to get db up and running our firebase hosting up and running.
+config file key to connect my react app to firebase backend
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCfpj8q1Ltlt6nz23oOk2_LCmaSNZxCDOs",
+  authDomain: "clone-app-71253.firebaseapp.com",
+  projectId: "clone-app-71253",
+  storageBucket: "clone-app-71253.appspot.com",
+  messagingSenderId: "723645702173",
+  appId: "1:723645702173:web:f208d7ffcc050023eca6f4",
+  measurementId: "G-9PTSFHJP7J"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+the header sticky to the top of the screen
+
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyC3vfixmDDXw69j-Re_OZy77XR23FcMAlk",
+  authDomain: "clone-app-65b47.firebaseapp.com",
+  projectId: "clone-app-65b47",
+  storageBucket: "clone-app-65b47.appspot.com",
+  messagingSenderId: "820871763934",
+  appId: "1:820871763934:web:5178b6545895e2e746af4f",
+  measurementId: "G-W2E75ZQ1Z2"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+2. active state when i selected an item ferom the yt list and when i hover over it kind of previews its going to be the next active state(with selected prop)
+recommendeVideos__videos -> container have all of the videos in it.
+the video componenttakes a few props img a title, channel name, num of viewas a timestamp and took a picture for the main thumbail channel image (octopus componenttakes)
+reuse these components and then bassically get the same functionality in a very simple reasonable maintanable way
+
+VIdeoCard(props){
+
+  another -> const {iamge, title ...} = props bassically destructure and then get outside of here 
+}
+
+
+import React from "react";
+
+function VideoComponent({
+  image,
+  title,
+  channel,
+  views,
+  timestamp,
+  cahnnelImage,
+}) {
+  return (
+    <div>
+        <img src={image} alt="" />
+        
+      <h4>Video</h4>
+    </div>
+  );
+}
+
+export default VideoComponent;
+
+
+ori (props){
+
+  return (
+
+    img src = {props.image}
+  )
+}
+
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/640px-YouTube_Logo_2017.svg.png"
+
+react router for routing (2 pages) 
+in the url /search/calistehnicsmovement shows what cause i typed in the search ba and actually choose that as a root
+ROuter whats in charge determing what url loads what component 
+search/:search this param will amtch any url so if its /search/america it will match taht route and then will render the search bridge.
+i type i nthe input field and hit the search button it will take /search/america
+
+connect the input state i go to the input and set the value attr and dop in input search, mapping to this piece of state
+adding on change event to the input, fires off an event basically fires off that event and then i setinputsearch
+update the sort of the state value.
+every time i types in update the state value and in turn that will update the state myinputsearch being used as the value for the input.
+
+whatever i have inside in my input search such of inside of my state thats where the url is going to take me to. handleing this stuff.
+dynamically update 
+no refresh 
+root the page with the therm that i look i want
+
+<ChannelComponent image verified subscribsNumber noOfVideos descirption/>
+
+
+2) Deploy the app using firebase
+
+firebase init go down to hosting
+
+
+You are currently outside your home directory
+
+? Which Firebase features do you want to set up for this directory? Press Space to s
+elect features, then Enter to confirm your choices. Hosting: Configure files for Fir
+ebase Hosting and (optionally) set up GitHub Action deploys
+
+=== Project Setup
+
+First, let's associate this project directory with a Firebase project.
+You can create multiple project aliases by running firebase use --add, 
+but for now we'll just set up a default project.
+
+
+
+
+Project Setup
+
+First, let's associate this project directory with a Firebase project.
+You can create multiple project aliases by running firebase use --add, 
+but for now we'll just set up a default project.
+
+? Please select an option: Use an existing project
+? Select a default Firebase project for this directory: clone-app-65b47 (youtube-clo
+ne-app)
+i  Using project clone-app-65b47 (youtube-clone-app)
+
+=== Hosting Setup
+
+Your public directory is the folder (relative to your project directory) that
+will contain Hosting assets to be uploaded with firebase deploy. If you
+have a build process for your assets, use your build's output directory.
+
+build is the folder thats gonna alolw me to actaully host my app online
+
+What do you want to use as your public directory? public
+? Configure as a single-page app (rewrite all urls to /index.html)? Yes
+? Set up automatic builds and deploys with GitHub? (y/
+
+  before i deploy antime i deploy i ahve to do the following npm run build 
+  npm run build takes the app that i built strips out all the sorts of unnecessary heavy tools devolper tools makes it super product like streamlined
+
+  firebase deploy
+
+
+  <VideoComponent
+            title="Inside the US War On Terror in Somalia"
+            channel="VICE News"
+            views="5.9M Views"
+            timestamp="1 year ago"
+            image="https://i.ytimg.com/vi/6DD9-W9z62o/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDv4wPLRaky4-9pNCcpN96IUboqtA"
+          />
+          <VideoComponent />
+
+
+
+
+
+
+
+          // const getRecommendedVideo = async () => {
+            //   const my_video = await fetch(
+            //     `https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=20&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+            //   );
+          
+            //   const video_data_json = await my_video.json();
+            //   setrecommendedVideo(video_data_json);
+            //   console.log(video_data_json);
+            // };
+          
+            // useEffect(() => {
+            //   getRecommendedVideo();
+            // }, []);
+
+
+
+            {/* <VideoComponent
+              title="Selfie Soldiers: Russia Checks in to Ukraine"
+              channel="VICE News"
+              views="2,325,595 Views"
+              timestamp="7 years ago"
+              channelImage="https://yt3.ggpht.com/7Rovb42ic91FtDS7hu-xfJVGtDLJXpkurMaKGisFKNRq0seH_qZ74ihhB5YRfEao0I5xiZnu=s88-c-k-c0x00ffffff-no-rj"
+              image="https://i.ytimg.com/vi/2zssIFN2mso/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLABk3e86Ls3B_U-VhdZikyme88q5Q"
+            />
+    
+            <VideoComponent
+              title="AM MANCAT LA RESTAURANTELE VEDELOR DIN BUCURESTI"
+              channel="Imi Place Sa Mananc"
+              views="8k Views "
+              timestamp="1 hour ago"
+              channelImage="https://yt3.ggpht.com/ytc/AMLnZu8V15UJ8c1Y56-fE7MSKYoszHPqJbEFw1zitinlow=s68-c-k-c0x00ffffff-no-rj"
+              image="https://i.ytimg.com/vi/QETWB4GRv4c/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDxXtiDkPOEIGXpnzDiB7DvVVSW-g"
+            /> */}  in recomvideocompo
+
+
+         project id : youtubecloneapp-361710
+         youtubecloneapp-361710
+
+         AIzaSyBASHUJMWFm1CW5gpAAvqkk9Q2vVTIAc0A api key
+
+         https://www.googleapis.com/youtube/v3/channels?part=snippet&chart=mostPopular&regionCode=RO&maxResults=20&key=${process.env.REACT_APP_YOUTUBE_API_KEY}
+
+         const video_data_json = await my_video.json();
+         setrecommendedVideo(video_data_json);
+         console.log(video_data_json);
+
+
+         fetch this api, fetch the recom videos  from this api.
+- because its data that i need to wait for i want to make sure that i have the data first before i rendering anything out
+when the component esentially gets render or munted i want to run this function as soon as possible.
+- RUNING THIS createvideoitems  AS SOON AS THE COMPOENNT GETS MOUNTED, [] ONLY RUN IT WHEN THE COMPONENT GETS MOUNTED maybe a value in app gets updated,searching for something every time my search changes run this function again
+its kind a like a var taht hold info but the advantage of it is when the var changes so all the that chagnes in that var the ui reacts to it 
+setPopularFoods allow to modify.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div className="container">
+<div className="containerChild">
+  <img
+    src="https://www.youtube.com/img/trending/avatar/trending_avatar.png"
+    alt=""
+  />
+  <h2>Trending</h2>
+</div>
+
+<div className="containerChild2">
+  <ul>
+    <li>Now</li>
+    <li>Music</li>
+    <MyLink to={"/feed/gaming"}>
+      <li>Gaming</li>
+    </MyLink>
+
+    <li>Movies</li>
+  </ul>
+</div>
+</div>
+
+
+
+<div
+className="container2"
+style={{ width: "100%", background: "#0F0F0F" }}
+>
+{gamingData.map((gaming_Video) => {
+  return (
+    <div className="gaming__video">
+      <div className="gamingVideos__videos">
+        <VideoGamingComponent
+          key={gaming_Video.videoId}
+          title={gaming_Video.title}
+          channelName={gaming_Video.channelName}
+          views={gaming_Video.views}
+          image={gaming_Video.image}
+          description={gaming_Video.description}
+        />
+      </div>
+    </div>
+  );
+})}
+</div>
+
+
+
+search page
+return (
+  <div>
+    <Header />
+    <div className="app__page">
+      <Sidebar />
+      <div className="searchPage">
+        <div className="searchPage__filter">
+          <TuneOutlinedIcon
+            className="filter_icon"
+            style={{ color: "#807d7d" }}
+          />
+          <h2 className="title" style={{ color: "#807d7d" }}>
+            FILTERS
+          </h2>
+        </div>
+
+        {/* <hr /> */}
+
+        {/**channel row  takes some props*/}
+        {/* <ChannelComponent
+          image="https://i.ytimg.com/vi/2zssIFN2mso/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLABk3e86Ls3B_U-VhdZikyme88q5Q"
+          channel="VICE News"
+          verified
+          subscribsNumber="16M subscribers"
+          noOfVideos="3713"
+          descirption="Enlightening commentary, authoritative advice, and unique stories you won't find anywhere else. Our immersive and ground-breaking storytelling has changed the way people think about culture, crime, art, parties, fashion, protest, the internet and..."
+        /> */}
+
+        <hr />
+        {/* {searchVideo.map((video) => {})} */}
+        {/* <VideoRow
+          title="The Central African Republic Is Enlisting Russians in Its War Against Rebels"
+          image="https://i.ytimg.com/vi/oK63yqJYkGg/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD2KsROVHkdWavqrG-cNpG6kg4avA"
+          channel="VICE News"
+          verified
+          views="1.2M "
+          timestamp="1 year ago"
+          channelImage="https://yt3.ggpht.com/7Rovb42ic91FtDS7hu-xfJVGtDLJXpkurMaKGisFKNRq0seH_qZ74ihhB5YRfEao0I5xiZnu=s68-c-k-c0x00ffffff-no-rj"
+          description="A new rebel movement in the Central African Republic is pushing to take the capital and has displaced over 400,000 people along..."
+        />
+
+        <VideoRow
+          title="Inside the US-Iran Shadow War for Control of the Middle East"
+          channel="VICE News"
+          verified
+          views="4M Views"
+          timestamp="1 years ago"
+          image="https://i.ytimg.com/vi/xrfDDrPOtlo/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD-qnUPs_dlJebkTG0tWvCbAdbcRQ"
+          channelImage="https://yt3.ggpht.com/7Rovb42ic91FtDS7hu-xfJVGtDLJXpkurMaKGisFKNRq0seH_qZ74ihhB5YRfEao0I5xiZnu=s68-c-k-c0x00ffffff-no-rj"
+          description="Back in March we sent a crew, including VICE Founder Suroosh Alvi, to Iran. We wanted to do a story about a rash of ..."
+        />
+
+        videorow cu props
+           
+    <div className="videoRow">
+    {searchVideo.map((video) => {
+
+     
+    })} 
+   <img src={image} alt="" />
+   <div className="videoRow__text">
+     <h3 className="title">{title}</h3>
+     <p className="videoRow__headline">
+       {channel} &#x2022; {subscribers} Subscribers {views} views &#x2022;{" "}
+       {timestamp}
+     </p>
+
+     <div className="videoComponent__info2">
+       <img src={channelImage} alt="" className="avatar2" />
+       <div className="video__text">
+         <p className="channelInfo">
+           {channel}{" "}
+           <span>{verified && <CheckCircleIcon className="checked" />}</span>
+         </p>
+       </div>
+     </div>
+
+     <p className="description">{description}</p>
+   </div>
+ </div>
+
+ videorow
+ //import VideoRow from "../components/VideoRow";
+
+
+
+ {/* <VideoRow
+  title="The Central African Republic Is Enlisting Russians in Its War Against Rebels"
+  image="https://i.ytimg.com/vi/oK63yqJYkGg/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD2KsROVHkdWavqrG-cNpG6kg4avA"
+  channel="VICE News"
+  verified
+  views="1.2M "
+  timestamp="1 year ago"
+  channelImage="https://yt3.ggpht.com/7Rovb42ic91FtDS7hu-xfJVGtDLJXpkurMaKGisFKNRq0seH_qZ74ihhB5YRfEao0I5xiZnu=s68-c-k-c0x00ffffff-no-rj"
+  description="A new rebel movement in the Central African Republic is pushing to take the capital and has displaced over 400,000 people along..."
+/>
+
+<VideoRow
+  title="Inside the US-Iran Shadow War for Control of the Middle East"
+  channel="VICE News"
+  verified
+  views="4M Views"
+  timestamp="1 years ago"
+  image="https://i.ytimg.com/vi/xrfDDrPOtlo/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD-qnUPs_dlJebkTG0tWvCbAdbcRQ"
+  channelImage="https://yt3.ggpht.com/7Rovb42ic91FtDS7hu-xfJVGtDLJXpkurMaKGisFKNRq0seH_qZ74ihhB5YRfEao0I5xiZnu=s68-c-k-c0x00ffffff-no-rj"
+  description="Back in March we sent a crew, including VICE Founder Suroosh Alvi, to Iran. We wanted to do a story about a rash of ..."
+/>
+
+<VideoRow
+  title=" Ambushed in South Sudan (Full Length)"
+  channel="VICE News"
+  verified
+  views="6.6M Views"
+  timestamp="8 years ago"
+  image="https://i.ytimg.com/vi/bmZBgZfGbhM/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCoieuH3fN-OZox1WJyetYYqL4zKA"
+  channelImage="https://yt3.ggpht.com/7Rovb42ic91FtDS7hu-xfJVGtDLJXpkurMaKGisFKNRq0seH_qZ74ihhB5YRfEao0I5xiZnu=s68-c-k-c0x00ffffff-no-rj"
+  description="The war in South Sudan began in murky circumstances in mid-December, when tribal factions within the country's army, the SPLA, ..."
+/>
+
+<VideoRow
+  title="The Next Phase Of Russia’s War In Ukraine"
+  channel="VICE News"
+  verified
+  views="3.5m Views"
+  timestamp="3 months ago"
+  image="https://i.ytimg.com/vi/IvNc9yDox8U/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLClhVf2JEdZe17IxWPvpIaqM95Eng"
+  channelImage="https://yt3.ggpht.com/7Rovb42ic91FtDS7hu-xfJVGtDLJXpkurMaKGisFKNRq0seH_qZ74ihhB5YRfEao0I5xiZnu=s68-c-k-c0x00ffffff-no-rj"
+  description="Note: Warning for Graphic Content The war in Ukraine has entered a new stage. As villagers around Kiyv emerge from a ..."
+/>
+
+<VideoRow
+  title="Inside the US War On Terror in Somalia"
+  channel="VICE News"
+  verified
+  views="5.9M Views"
+  timestamp="1 year ago"
+  image="https://i.ytimg.com/vi/6DD9-W9z62o/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDv4wPLRaky4-9pNCcpN96IUboqtA"
+  channelImage="https://yt3.ggpht.com/7Rovb42ic91FtDS7hu-xfJVGtDLJXpkurMaKGisFKNRq0seH_qZ74ihhB5YRfEao0I5xiZnu=s68-c-k-c0x00ffffff-no-rj"
+  description="Fifteen years after the creation of al-Shabaab in Somalia, terror still reigns and the reality on the ground just shifted more in their ..."
+/>
+
+<VideoRow
+  title="How Coups Are Derailing the US War on Terror in Africa"
+  channel="VICE News"
+  verified
+  views="1.2M Views"
+  timestamp="4 months ago"
+  image="https://i.ytimg.com/vi/mfuQYrqXxbI/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC9t3QioMmpji8sEm19LXnwH1x1lg"
+  channelImage="https://yt3.ggpht.com/7Rovb42ic91FtDS7hu-xfJVGtDLJXpkurMaKGisFKNRq0seH_qZ74ihhB5YRfEao0I5xiZnu=s68-c-k-c0x00ffffff-no-rj"
+  description="Fifteen years after the creation of al-Shabaab in Somalia, terror still reigns and the reality on the ground just shifted more in their ..."
+/> */}
+
+
+
+
+
+
+
+
+<ChannelComponent
+image="https://i.ytimg.com/vi/2zssIFN2mso/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLABk3e86Ls3B_U-VhdZikyme88q5Q"
+channel="VICE News"
+verified
+subscribsNumber="16M subscribers"
+noOfVideos="3713"
+descirption="Enlightening commentary, authoritative advice, and unique stories you won't find anywhere else. Our immersive and ground-breaking storytelling has changed the way people think about culture, crime, art, parties, fashion, protest, the internet and..."
+/>
+
+
+
+
+
+
+
+
+<div className="videoRow" key={index}>
+<img src={video.snippet.thumbnails.medium.url} alt="" />
+<div className="videoRow__text">
+  <h3 className="title">{video.snippet.title}</h3>
+  <p className="videoRow__headline">
+    {} &#x2022; {} Subscribers {} views &#x2022; {}
+  </p>
+
+  <div className="videoComponent__info2">
+    <img
+      src={video.snippet.thumbnails.default.url}
+      alt=""
+      className="avatar2"
+    />
+    <div className="video__text">
+      <p className="channelInfo">
+        {video.snippet.channelTitle}{" "}
+        <span>
+          {/* {verified && <CheckCircleIcon className="checked" />} */}
+        </span>
+      </p>
+    </div>
+  </div>
+
+  <p className="description">{video.snippet.description}</p>
+</div>
+</div>
+
+
+
+Tooltip
+
+Tooltip.js does four important things:
+
+It takes everything inside a <Tooltip> component and moves it inside a div with Tooltip-Wrapper class by using props.children
+It controls what content will be inside the tooltip bubble with props.content
+It controls where the bubble will appear using the value passed to props.direction as a class.
+It controls when it shows by listening to onMouseEnter and onMouseLeave events
+
+
+proiect personal
+
+This web application is a simple tap music block that make different
+sound and I made a ball that jump to the top and bottom on different
+sound and color block that the user pressed.
+
+
+This will be an web application that will monitor the weather in
+            real time in the current location of the user. I will use
+            OpenWeather API for this application to get real date about weahter
+            and location.
+            v3
+
+            This web application is a simple tap music block that make different
+            sound and I made a ball that jump to the top and bottom on different
+            sound and color block that the user pressed.

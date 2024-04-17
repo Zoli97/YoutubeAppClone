@@ -1,0 +1,33 @@
+.Tooltip-Wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.Tooltip-Tip {
+  width: 60px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  border-radius: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  background-color: #373737;
+  font-size: 14px;
+  font-family: sans-serif;
+
+  z-index: 100;
+  white-space: nowrap;
+}
+
+/* Absolute positioning */
+.Tooltip-Tip.bottom {
+  bottom: calc(85px * -1);
+}
+/* CSS border triangles */
+.Tooltip-Tip.bottom::before {
+  bottom: 100%;
+}
